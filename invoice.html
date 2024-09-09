@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Invoice</title>
+</head>
+
+<body>
+    <div id="all" style="align-content:center ;">
+
+
+        <div id="root" style="width:600px; border:1px solid black ">
+            <div style="  display:flex; ">
+                <div id="brand-logo"
+                    style=" flex:1; vertical-align:middle; align-content:center; ">
+                    <img src="/amazon-logo.png" style="height:40px; width:120px" alt="">
+                </div>
+
+                <div id="bill details" style="">
+                    <h5>Tax Invoice/Bill of Supply/Cash Memo <br>(Original for Reciept)</h5>
+                </div>
+            </div>
+            <div id="seller-customer-detail" style="">
+                <div id="seller-customer">
+
+                    <div id="seller-details" style="display: flex;">
+
+                        <div id="seller"
+                            style="word-wrap:break-word;  width:50%; display:inline-block  ">
+                            <B>Sold By:</B>
+                            <div id="seller-name-address">
+                                <p>
+                                    Varasiddhi Silk Exports
+                                    75,3rd Cross,lalbagh Road
+                                    BENGALURU ,KARNATAKA,560027,IN
+                                </p>
+                            </div>
+
+                            <p>
+                                <b>Pan No:</b><span id="seller-pan-no">AACFV3325K</span> <br>
+                                <b>GST Registration No:</b><span id="gst-number"> 29AACFV3325K1ZY</span>
+
+                            </p>
+                            <p></p>
+
+                        </div>
+
+                        <div id="customer" style="word-wrap:break-word; width:50%;  text-align:right ">
+                            <B>Billing Address</B><br>
+                            <p>
+                            <div id="customer_name">
+                                Madhu B Eurofins IT Solutions India Pvt Ltd.
+                            </div>
+                            <span id="customer_address">
+                                1st
+                                floor, Maruti Platinum, lakshminarayana Pura, AECS
+                                Layout BANGALURU,KARNATAKA, 560037 IN
+                            </span>
+                            <br>
+                            <b>State/UT Code:</b> <span id="state_code">29</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="shiping-details" style=" display:flex; text-align:right">
+                <div id="blank-space"
+                    style="word-wrap:break-word;  width:50%; display:inline-block  ">
+                    <!-- <B>Billing Address</B><br>
+                <p>
+                    Madhu B Eurofins IT Solutions India Pvt Ltd. , 1st
+                    floor, Maruti Platinum, lakshminarayana Pura, AECS
+                    Layout BANGALURU,KARNATAKA, 560037 IN
+                    <br>
+                    <b>State/UT Code:</b> 29 -->
+                    </p>
+                </div>
+                <div id="delivery-details" style="word-wrap:break-word;  width:50%;   ">
+                    <B>Shipping Address</B><br>
+                    <p>
+                    <div id="delivery_name">
+                        Madhu B Eurofins IT Solutions India Pvt Ltd.
+                    </div>
+                    <span id="delivery_address">
+                        1st
+                        floor, Maruti Platinum, lakshminarayana Pura, AECS
+                        Layout BANGALURU,KARNATAKA, 560037 IN
+                    </span>
+
+                    <br>
+                    <div> <b>State/UT Code:</b> <span id="delivery_statecode">29</span></div> <br>
+                    <div> <b>Place of supply :</b> <span id="place_of_supply">KARNATAKA</span></div>
+                    <div><b>Place of delivery :</b> <span id="place_of_delivery">KARNATAKA</span> </div>
+
+                    </p>
+                </div>
+            </div>
+            <div id="order-number-date-invoivenumber" style=" display:flex">
+                <div id="order-number-date" style="word-wrap:break-word;  width:50%;   ">
+                    <div id="order-number"><b> Order Number:</b> 403-3225714-7676307 </div>
+                    <div id="order-date"> <b>Order date:</b> 08.09.2024</div>
+                </div>
+                <div id="invoice-detail" style="word-wrap:break-word; text-align:right;  width:50%;   ">
+                    <div id="invoice-number"> <b>Invoice Number:</b> IN-761 </div>
+                    <div id="invoice-details"> <b>Invoice Details :</b> BR-310565025-1920</div>
+                    <div id="invoice-date"><b>Invoice date :</b>08.09.2024</div>
+                </div>
+            </div>
+
+
+            <div id="items-details">
+                <div id="item-list">
+                    <table id="invoice-items" border="1" style="width: 100%; border:1px black solid;">
+                        <tr style="background-color: rgb(151, 154, 154);">
+                            <th>Sl.</th>
+                            <th>Description</th>
+                            <th>Unit Price</th>
+                            <th>Qty</th>
+                            <th>Net Amount</th>
+                            <th>Tax Rate</th>
+                            <th>Tax Type</th>
+                            <th>Tax amount</th>
+                            <th>Total Amount</th>
+                        </tr>
+                        <tr>
+                            <td colspan="7"><b>Total :</b></td>
+
+                            <td style="background-color: rgb(151, 154, 154);">
+                                <div id="tax-amount">0.0</div>
+                            </td>
+                            <td style="background-color: rgb(151, 154, 154);">
+                                <div id="total-bill-amount">0.0</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <b>Amount in words:</b>
+                                <div id="amount-in-words">One Hundred and one</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="9">
+                                <div style="text-align:right;">
+                                    <b>
+                                        <div id="seller-name-signature">For <span id="exporter_name">Seller Name</span>
+                                            Export:</div>
+                                    </b>
+                                    <div id="seller-signature">
+                                        <img src="./sample_signature.jpg" style="height:70px; width:100px;" alt="">
+                                    </div>
+                                    <div><b>Authorized Signatory</b></div>
+                                </div>
+
+
+                            </td>
+                        </tr>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <button onclick="downloadPDF()">
+        Download Invoice
+    </button> -->
+   
+    <script src="/billgenerator.js"></script>
+
+
+</body>
+
+</html>
