@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill generator</title>
+    
+</head>
+<body>
+    <h1>Amazon bill generator</h1>
+    <form action="">
+        <div style="border: 2px red solid">
+            <h3>Seller details</h3>
+        <label for="sellername">Seller Name:</label>
+        <input type="text" id="sellername" required >
+        <br>
+        <label for="sellerAddress">Seller Address</>:</label>
+        <br>
+    <table>
+            <tr>
+                <td>
+                    <label for="sellercity">City:</label>
+                    <input type="text" id="sellercity">
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <label for="sellerstate">State:</label>
+                    <input type="text" id="sellerstate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sellerPIN">Pin:</label>
+                    <input type="text" id="sellerPIN">
+                </td>
+            </tr>
+        
+        
+    </table>
+        <!-- <input type="text" style="width: 200px; height:40px;""  id="sellerAddress"> -->
+        <br>
+        <label for="sellerpan">Seller Pan No:</label>
+        <input type="text" id="sellerpan">
+        <br>
+        <label for="sellerGST">Seller GST Registration No:</label>
+        <input type="text" id="sellerGST">
+        <br>
+        <label for="sellersupply">Place of Supply:</label>
+        <input type="text" id="sellersupply">
+        <br>
+    </div>
+
+    <div style="border: 2px red solid">
+        <h3>Customer details</h3>
+    <label for="customername">Customer Name:</label>
+    <input type="text" id="customername">
+    <br>
+    <label for="customerAddress">Customer Address</>:</label>
+    <br>
+    <table>
+            <tr>
+                <td>
+                    <label for="customercity">City:</label>
+                    <input type="text" id="customercity">
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <label for="customerstate">State:</label>
+                    <input type="text" id="customerstate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="customerPIN">Pin:</label>
+                    <input type="number" id="customerPIN">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="customerState/UT">State/UT code:</label>
+                    <input type="text" id="customerState/UT">
+                </td>
+            </tr>
+        
+        
+    </table>
+    
+    <h3>Delivery Details</h3>
+    
+   
+      <form action="">
+        <label for="DeliveryName">Name:</label>
+        <input type="text" id="DeliveryName">
+        <label for="Deliverycontact">Contact No.:</label>
+        <input type="number" id="Deliverycontact" >
+        <br><br>
+        <label for="DeliveryAddress">Delivery Address</>:</label>
+    <br>
+    <table>
+            <tr>
+                <td>
+                    <label for="Deliverycity">City:</label>
+                    <input type="text" id="Deliverycity">
+                </td>
+               
+            </tr>
+            <tr>
+                <td>
+                    <label for="deliverystate">State:</label>
+                    <input type="text" id="deliverystate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="deliveryPIN">Pin:</label>
+                    <input type="number" id="deviveryPIN">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="deliveryState/UT">State/UT code:</label>
+                    <input type="text" id="deliveryState/UT">
+                </td>
+            </tr>
+        
+        
+    </table>
+      </form>
+</div>
+        
+
+    </form>
+
+    <div style="border: 2px solid blue;" >
+       
+        Item Detail
+        <p id="item"></p>
+        <form action="" id="itemdetails">
+            <table id="itmtable">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Discount(%)</th>
+                    <th>tax(%)</th>
+                    <th>Net Amount</th>
+                    <th></th>
+                </tr>
+                <div id="added-items">
+                     
+                </div>
+                <tr>
+                   
+                    <td><input type="text" id="itemName"></td>
+                    <td><input type="text" id="itemDescription"></td>
+                    <td><input type="number" id="unitprice"></td>
+                    <td><input type="number" id="itemQty"></td>
+                    <td><input type="number" id="itemdiscount" value="0"></td>
+                    <td><input type="number" id="tax" value="18" ></td>
+                    <td></td>
+                    <td><button id="addbtn" onclick="additm()" >add</button></td>
+                </tr>
+                
+            </table>
+            
+        </form>
+
+
+    </div>
+
+
+
+<div>
+    <button onclick="billCreate()">Create Bill</button>
+</div>
+
+
+
+
+    <script src="billgenerator.js"></script>
+</body>
+</html>
